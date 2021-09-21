@@ -22,7 +22,7 @@ export class ClienteRegsitroComponent implements OnInit {
     
     this.cliente.calcularValor();
 
-    if (!this.clienteService.validateExistente(this.cliente)){      
+    if (this.clienteService.validateExistente(this.cliente.identificacion) == null){      
       this.clienteService.post(this.cliente);
       alert('seguardo'+ JSON.stringify(this.cliente));
     }else{

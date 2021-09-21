@@ -6,11 +6,11 @@ import { Cliente } from '../vivirmejor/models/cliente';
 })
 export class ClienteService {
 
-  clientes: Cliente[];
+  
   constructor() { }
 
   get(): Cliente[]{
-    return JSON.parse(localStorage.getItem('datos'));
+    return JSON.parse(localStorage.getItem('datosCliente'));
   }
 
   post(cliente: Cliente){
@@ -20,19 +20,20 @@ export class ClienteService {
     }
 
     clientes.push(cliente);
-    localStorage.setItem('datos', JSON.stringify(clientes));
+    localStorage.setItem('datosCliente', JSON.stringify(clientes));
   }
 
-  validateExistente(cliente: Cliente){
-    this.clientes = this.get();
-    if(this.clientes != null){
-      for(var item of this.clientes){
-        if(cliente.identificacion === item.identificacion){
-          return true;
+  validateExistente(identificacion: string) {
+    let clientes: Cliente[];
+    clientes = this.get();
+    if(clientes != null){
+      for(var item of clientes){
+        if(identificacion === item.identificacion){
+          return item;
         }
       }
     }
-    return false;
+    return null;
   }
 }
 

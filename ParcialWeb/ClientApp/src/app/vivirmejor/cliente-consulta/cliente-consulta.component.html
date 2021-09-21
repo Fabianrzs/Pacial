@@ -1,1 +1,29 @@
-<p>cliente-consulta works!</p>
+<br>
+<br>
+
+<table class="table table-striped" *ngIf='clientes && clientes.length'>
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Identificacion del Cliente</th>
+        <th scope="col">Nombre del Cliente</th>
+        <th scope="col">Proyecto de vivienda</th>
+        <th scope="col">Valor total de la vivienda</th>
+        <th scope="col">cuota Inicial (20%)</th>
+        <th scope="col">Valor Abonado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientes; index as i ">
+        <th scope="row">{{ i + 1 }}</th>
+
+        <td >{{ cliente.identificacion }} </td>
+        <td>{{ cliente.nombre }}</td>
+        <td>{{cliente.proyecto }}</td>
+        <td>{{cliente.valor }}</td>
+        <td>{{ cliente.cuotaInicial }}</td>
+        <td>{{ getAbono(cliente.identificacion)}}</td>
+      </tr>
+    </tbody>
+  </table>
+  

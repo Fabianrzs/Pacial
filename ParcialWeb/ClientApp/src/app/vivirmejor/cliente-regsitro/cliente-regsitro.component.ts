@@ -24,7 +24,7 @@ export class ClienteRegsitroComponent implements OnInit {
 
     if (this.clienteService.validateExistente(this.cliente.identificacion) == null){      
       this.clienteService.post(this.cliente);
-      alert('seguardo'+ JSON.stringify(this.cliente));
+      alert('se guardo'+ JSON.stringify(this.cliente));
     }else{
        alert('Ya se encontro registrado en el programa');
     }

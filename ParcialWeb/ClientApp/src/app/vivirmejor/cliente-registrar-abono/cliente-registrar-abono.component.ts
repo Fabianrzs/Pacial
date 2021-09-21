@@ -24,11 +24,9 @@ export class ClienteRegistrarAbonoComponent implements OnInit {
 
     if(cliente != null){   
       var sumAbonos = this.abonoService.calculoAbonos(this.abono.idCLiente)    
-      alert(sumAbonos);
-      alert(cliente.cuotaInicial);
       if(sumAbonos >= cliente.cuotaInicial){        
-        alert("El cliente ya finalizo el pago");       
-      }       
+        alert("El cliente ya finalizo el pago del abono");       
+      }
       this.abonoService.post(this.abono);
       alert('se registro el abono por '+(this.abono.valorAbono));      
     }else{

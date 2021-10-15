@@ -14,4 +14,3 @@ D:\ARCHIVOS UNIVERSIDAD\5 Semest\P WEB\C1\Pacial\BLL\bin\Debug\net5.0\DAL.dll
 D:\ARCHIVOS UNIVERSIDAD\5 Semest\P WEB\C1\Pacial\BLL\bin\Debug\net5.0\Entity.dll
 D:\ARCHIVOS UNIVERSIDAD\5 Semest\P WEB\C1\Pacial\BLL\bin\Debug\net5.0\DAL.pdb
 D:\ARCHIVOS UNIVERSIDAD\5 Semest\P WEB\C1\Pacial\BLL\bin\Debug\net5.0\Entity.pdb
-D:\ARCHIVOS UNIVERSIDAD\5 Semest\P WEB\C1\Pacial\BLL\obj\Debug\net5.0\BLL.csproj.CopyComplete

@@ -5,8 +5,6 @@ import { Cliente } from '../vivirmejor/models/cliente';
   providedIn: 'root'
 })
 export class ClienteService {
-
-  
   constructor() { }
 
   get(): Cliente[]{
@@ -35,5 +33,7 @@ export class ClienteService {
     }
     return null;
   }
+ 
 }
+
 

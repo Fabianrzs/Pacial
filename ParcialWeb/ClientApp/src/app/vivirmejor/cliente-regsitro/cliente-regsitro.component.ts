@@ -23,11 +23,14 @@ export class ClienteRegsitroComponent implements OnInit {
     this.cliente.calcularValor();
 
     if (this.clienteService.validateExistente(this.cliente.identificacion) == null){      
+      
       this.clienteService.post(this.cliente);
       alert('se guardo'+ JSON.stringify(this.cliente));
+
     }else{
        alert('Ya se encontro registrado en el programa');
     }
+
   }
 
 }

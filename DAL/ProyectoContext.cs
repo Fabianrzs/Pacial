@@ -17,15 +17,15 @@ namespace DAL
 
         protected override void OnModelCreating(ModelBuilder model)
         {
-            model.Entity<Cliente>()
-                .HasOne<ProyectoVivienda>(c => c.Proyecto)
-                .WithMany(p => p.Clientes)
-                .HasForeignKey(c => c.CodProyecto);
-
             model.Entity<Abono>()
                 .HasOne<Cliente>(a => a.Cliente)
                 .WithMany(c => c.Abonos)
-                .HasForeignKey(a => a.CodAbono);
+                .HasForeignKey(a => a.IdCliente);
+
+            model.Entity<Cliente>()
+                .HasOne<ProyectoVivienda>(c => c.Proyecto)
+                .WithMany(p => p.Clientes)
+                .HasForeignKey(c => c.CodProyecto);            
         }
 
         public DbSet<Cliente> Clientes { get; set; }

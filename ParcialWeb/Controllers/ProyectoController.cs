@@ -1,5 +1,6 @@
 ﻿using BLL;
 using DAL;
+using Entity;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -20,7 +21,13 @@ namespace parcialWeb.Controllers
             service = new ProyectoService(context);
         }
 
-
+        [HttpGet]
+        public ActionResult<List<ProyectoVivienda>> ConsultaProyectos()
+        {
+            var respuesta = service.ConsultarProyectos();
+            if (respuesta.Error) return BadRequest(respuesta.Mensaje);
+            return Ok(respuesta.Proyectos);
+        }
 
     }
 }

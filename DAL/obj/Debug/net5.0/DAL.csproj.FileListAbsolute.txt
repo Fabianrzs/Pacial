@@ -1,6 +1,4 @@
 D:\ARCHIVOS UNIVERSIDAD\5 Semest\P WEB\C1\Pacial\DAL\bin\Debug\net5.0\DAL.deps.json
-D:\ARCHIVOS UNIVERSIDAD\5 Semest\P WEB\C1\Pacial\DAL\bin\Debug\net5.0\DAL.runtimeconfig.json
-D:\ARCHIVOS UNIVERSIDAD\5 Semest\P WEB\C1\Pacial\DAL\bin\Debug\net5.0\DAL.runtimeconfig.dev.json
 D:\ARCHIVOS UNIVERSIDAD\5 Semest\P WEB\C1\Pacial\DAL\bin\Debug\net5.0\DAL.dll
 D:\ARCHIVOS UNIVERSIDAD\5 Semest\P WEB\C1\Pacial\DAL\bin\Debug\net5.0\ref\DAL.dll
 D:\ARCHIVOS UNIVERSIDAD\5 Semest\P WEB\C1\Pacial\DAL\bin\Debug\net5.0\DAL.pdb
@@ -14,4 +12,3 @@ D:\ARCHIVOS UNIVERSIDAD\5 Semest\P WEB\C1\Pacial\DAL\obj\Debug\net5.0\DAL.csproj
 D:\ARCHIVOS UNIVERSIDAD\5 Semest\P WEB\C1\Pacial\DAL\obj\Debug\net5.0\DAL.dll
 D:\ARCHIVOS UNIVERSIDAD\5 Semest\P WEB\C1\Pacial\DAL\obj\Debug\net5.0\ref\DAL.dll
 D:\ARCHIVOS UNIVERSIDAD\5 Semest\P WEB\C1\Pacial\DAL\obj\Debug\net5.0\DAL.pdb
-D:\ARCHIVOS UNIVERSIDAD\5 Semest\P WEB\C1\Pacial\DAL\obj\Debug\net5.0\DAL.genruntimeconfig.cache

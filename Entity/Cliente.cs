@@ -10,10 +10,10 @@ namespace Entity
         public string Identificacion { get; set; }
         public string Nombre { get; set; }
 
+        public ICollection<Abono> Abonos { get; set; }
+
         [Required]
         public int CodProyecto { get; set; }
         public ProyectoVivienda Proyecto { get; set; }
-
-        public ICollection<Abono> Abonos { get; set; }
     }
 }

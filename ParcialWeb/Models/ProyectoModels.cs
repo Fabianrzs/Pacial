@@ -27,7 +27,7 @@ namespace parcialWeb.Models
     {
         public string Identificacion { get; set; }
         public string Nombre { get; set; }
-        public int CodProyecto { get; set; }
+        public ProyectoVivienda Proyecto { get; set; }
     }
     public class ClienteViewModel : ClienteInputModel
     {
@@ -35,14 +35,14 @@ namespace parcialWeb.Models
         {
             Identificacion = cliente.Identificacion;
             Nombre = cliente.Nombre;
-            CodProyecto = cliente.CodProyecto;
+            Proyecto = cliente.Proyecto;
         }
     }
 
     public class AbonoInputModel
     {
         public decimal Valor { get; set; }
-        public string IdCliente { get; set; }
+        public Cliente Cliente { get; set; }
     }
     public class AbonoViewModel : AbonoInputModel
     {
@@ -52,7 +52,7 @@ namespace parcialWeb.Models
         {
             CodAbono = abono.CodAbono;
             Valor = abono.Valor;
-            IdCliente = abono.IdCliente;
+            Cliente = abono.Cliente;
         }
     }
 }

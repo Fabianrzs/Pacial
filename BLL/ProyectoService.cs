@@ -109,6 +109,23 @@ namespace BLL
         }
 
 
+        public LogClienteResponse RegistrarCliente(Cliente cliente)
+        {
+            try
+            {
+
+                if (_context.Clientes.Find(cliente.Identificacion) != null)
+                {
+                    return new LogClienteResponse($"El cliente ya se encuentra registrado");
+                }
+
+                _context.Clientes.Add(cliente);
+                return new LogClienteResponse(cliente);
+            }
+            catch (Exception e) { return new LogClienteResponse( $"Error al registrar el Cliente {e}"); }
+
+        }
+
         public class LogClienteResponse
         {
             public Cliente Cliente { get; set; }
@@ -128,5 +145,35 @@ namespace BLL
             }
 
         }
+
+        public ClienteConsultaResponse ConsultarClientes()
+        {
+            try
+            {
+                return new ClienteConsultaResponse(_context.Clientes.ToList());
+            }
+            catch (Exception e) { return new ClienteConsultaResponse($"Error al Consultar los clientes {e}"); }
+        }
+
+        public class ClienteConsultaResponse
+        {
+            public List<Cliente> Clientes { get; set; }
+            public string Mensaje { get; set; }
+            public bool Error { get; set; }
+
+            public ClienteConsultaResponse(List<Cliente> clientes)
+            {
+                Clientes = clientes;
+                Error = false;
+            }
+
+            public ClienteConsultaResponse(string mensaje)
+            {
+                Mensaje = mensaje;
+                Error = true;
+            }
+
+        }
+
     }
 }
